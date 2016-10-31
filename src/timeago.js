@@ -29,9 +29,10 @@ var TimeAgo = (function () {
         }
     };
     TimeAgo.prototype.getTimeAgo = function (val) {
-        var diff = new lang_1.Date().getTime() - new lang_1.Date(val).getTime();
+        var diff = new Date().getTime() - new Date(val).getTime();
         if (diff > this.maxPeriod) {
-            var datePipe = new common_1.DatePipe();
+            core_1.LOCALE_ID.toString;
+            var datePipe = new common_1.DatePipe(core_1.LOCALE_ID.toString());
             return datePipe.transform(val, this.afterMaxDateFormat);
         }
         var period = {
@@ -55,7 +56,7 @@ var TimeAgo = (function () {
         return n + ' ' + unit + (n != 1 ? 's' : '') + ' ' + this.suffix;
     };
     TimeAgo.prototype.supports = function (obj) {
-        return lang_1.isDate(obj) || lang_1.isNumber(obj);
+        return lang_1.isDate(obj) || lang_1.NumberWrapper.isNumeric(obj);
     };
     TimeAgo.prototype.ngOnInit = function () {
         if (this.timer) {
@@ -78,7 +79,7 @@ var TimeAgo = (function () {
     };
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', lang_1.Date)
+        __metadata('design:type', Date)
     ], TimeAgo.prototype, "time", void 0);
     __decorate([
         core_1.Input(), 

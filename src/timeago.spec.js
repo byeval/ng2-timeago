@@ -8,9 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var testing_1 = require('angular2/testing');
-var core_1 = require('angular2/core');
-var timeago_1 = require('../src/timeago');
+var testing_1 = require('@angular/testing');
+var core_1 = require('@angular/core');
 function main() {
     testing_1.describe('TimeAgo tests', function () {
         var builder;
@@ -39,8 +38,7 @@ var TimeAgoController = (function () {
     TimeAgoController = __decorate([
         core_1.Component({
             selector: 'time-ago',
-            template: "\n      <time-ago [time]=\"time\" [live]=\"live\" [interval]=\"interval\" [maxPeriod]=\"maxPeriod\" [afterMaxDateFormate]=\"format\" [suffix]=\"suffix\" ></timeago>\n    ",
-            directives: [timeago_1.TimeAgo]
+            template: "\n      <time-ago [time]=\"time\" [live]=\"live\" [interval]=\"interval\" [maxPeriod]=\"maxPeriod\" [afterMaxDateFormate]=\"format\" [suffix]=\"suffix\" ></timeago>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], TimeAgoController);
@@ -53,8 +51,7 @@ var StaticTimeAgoController = (function () {
     StaticTimeAgoController = __decorate([
         core_1.Component({
             selector: 'static-time-ago',
-            template: "\n      <time-ago [time]=\"time\" [live]=\"false\" ></timeago>\n    ",
-            directives: [timeago_1.TimeAgo]
+            template: "\n      <time-ago [time]=\"time\" [live]=\"false\" ></timeago>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], StaticTimeAgoController);

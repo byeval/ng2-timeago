@@ -9,8 +9,8 @@ inject,
 tick,
 ComponentFixture,
 TestComponentBuilder
-} from 'angular2/testing'
-import {Component} from 'angular2/core'
+} from '@angular/testing'
+import {Component} from '@angular/core'
 import {TimeAgo} from '../src/timeago'
 
 export function main() {
@@ -34,8 +34,7 @@ export function main() {
     selector: 'time-ago',
     template: `
       <time-ago [time]="time" [live]="live" [interval]="interval" [maxPeriod]="maxPeriod" [afterMaxDateFormate]="format" [suffix]="suffix" ></timeago>
-    `,
-    directives: [TimeAgo]
+    `
 })
 
 class TimeAgoController {
@@ -51,8 +50,7 @@ class TimeAgoController {
     selector: 'static-time-ago',
     template: `
       <time-ago [time]="time" [live]="false" ></timeago>
-    `,
-    directives: [TimeAgo]
+    `
 })
 
 class StaticTimeAgoController {
