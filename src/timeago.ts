@@ -1,10 +1,9 @@
 import {
   isDate,
-  isNumber,
-  Date,
+  NumberWrapper,
   isBlank
 } from '@angular/core/src/facade/lang'
-import {Input, Component, OnInit, OnDestroy} from '@angular/core'
+import {Input, Component, OnInit, OnDestroy, LOCALE_ID} from '@angular/core'
 import {DatePipe} from '@angular/common'
 
 @Component({
@@ -19,7 +18,7 @@ export class TimeAgo implements OnInit, OnDestroy{
     @Input() afterMaxDateFormat: string = 'medium'
     @Input() suffix: string = 'ago'
     private timeago: string
-    private timer: any
+    private timer: number
     
     transform(val){
        this.timeago = this.getTimeAgo(val)
@@ -34,7 +33,8 @@ export class TimeAgo implements OnInit, OnDestroy{
         let diff: number = new Date().getTime() - new Date(val).getTime()
         
         if (diff > this.maxPeriod){
-            let datePipe: DatePipe = new DatePipe()
+            LOCALE_ID.toString
+            let datePipe: DatePipe = new DatePipe(LOCALE_ID.toString())
             return datePipe.transform(val, this.afterMaxDateFormat)
         }
         
@@ -64,7 +64,7 @@ export class TimeAgo implements OnInit, OnDestroy{
     }
     
     supports(obj: any): boolean { 
-        return isDate(obj) || isNumber(obj) 
+        return isDate(obj) || NumberWrapper.isNumeric(obj) 
     }
     
     ngOnInit(){

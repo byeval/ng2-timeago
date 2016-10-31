@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/xuhong/ng2-timeago#readme",
   "devDependencies": {
-    "@angular/core": "2.0.0-rc.1",
-    "@angular/common": "2.0.0-rc.1",
+    "@angular/common": "^2.1.2",
+    "@angular/core": "^2.1.2",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.2",
@@ -33,9 +33,11 @@
     "karma-typescript-preprocessor": "0.0.21",
     "reflect-metadata": "^0.1.2",
     "remap-istanbul": "^0.5.1",
+    "rxjs": "^5.0.0-beta.12",
     "systemjs": "^0.19.24",
     "tsconfig": "^2.2.0",
     "typescript": "^1.8.7",
-    "typings": "^0.7.5"
+    "typings": "^0.7.5",
+    "zone.js": "^0.6.26"
   }
 }
