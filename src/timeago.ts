@@ -23,9 +23,7 @@ export class TimeAgo implements OnInit, OnDestroy{
     transform(val){
        this.timeago = this.getTimeAgo(val)
        if(this.live){
-           this.timer = setInterval(()=> {
-               this.timeago = this.getTimeAgo(val)
-           }, this.interval)
+           this.timer = setInterval(this.timeago = this.getTimeAgo(val), this.interval)
        }
     }
     
